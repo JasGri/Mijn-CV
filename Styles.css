@@ -11,7 +11,9 @@ h1 {
   width: 80%;
   background-color: rgb(200,25,127);
   border-radius: 10px;
-  padding: 20px; }
+  padding: 20px; 
+  text-align: center;
+}
 h2 {
   font-family: verdana;
   position: relative;
@@ -22,7 +24,8 @@ h2 {
   width: 80%;
   background-color: rgb(96,150,70);
   border-radius: 10px;
-  padding: 20px; }
+  padding: 20px; 
+}
 div {
   position: relative;
   top: 2px;
@@ -31,7 +34,8 @@ div {
   width: 80%;
   background-color: white;
   border-radius: 10px;
-  padding: 20px;}
+  padding: 20px;
+}
 dl {
   position: relative;
   top: 2px;
@@ -40,4 +44,5 @@ dl {
   width: 80%;
   background-color: white;
   border-radius: 10px;
-  padding: 20px; }
+  padding: 20px; 
+}
