@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+</head>
+<body onload="my_grootte()">
+
+
+
+
+Verander de grootte: 
+<input id="grootte" type="text" value=8 onchange="my_grootte()">
+<br><br>
+
+<div id="dambord"></div>
+
+
+<script>
+
+function my_grootte() {
+  var character = "#";
+  var character2 = ' | ';
+  var line = "";
+  var row = "";
+	var size = document.getElementById("grootte").value ;
+  	for(var i = 1; i <= size; i++){
+		line += character2+ character ;
+	}
+	line += character2 ;
+	for(var j = 1; j <= size; j++){
+		row += line + "<br>"; 
+	
+	}
+    	
+	document.getElementById("dambord").innerHTML = row;
+}    
+</script>
+</body>
+</html>
