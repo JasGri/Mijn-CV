@@ -1,11 +1,17 @@
-﻿<!DOCTYPE.html>
+<!DOCTYPE.html>
 <html>
-<body onload="countChar('DAAR KOMT DE DOMME DODO', O)">
-<div id"characters"></div>
+<body>
+'DAAR KOMT DE DOMME DODO'
+<div>'Voer hoofdletter in die voorkomt in de zin'<br><div>
+<input id="Str" type="text" onchange="countChar(this.value)" ><br>
+'Hoe vaak komt letter voor in de zin?'<br>
+<input id="characters" type="text" ><br>
+
+
 
 <script>
 function countDs() {
-  var str = "DAAR KOMT DE DOMME DODO",
+  var str = "DAAR KOMT DE DOMME DODO";
   var count = 0;
   for(var i = 0; i < str.length; i++) {
     if (str.charAt(i) === 'D') {
@@ -13,19 +19,20 @@ function countDs() {
     }
   }
 
-document.getElementById("characters").innerHTML = count;
+  document.getElementById("characters").value = count;
 }
 
 
-function countChar(str, my_chr) {
-var count = 0;
+function countChar(my_chr) {
+  var count = 0;
+  var str = "DAAR KOMT DE DOMME DODO";
   for(var i = 0; i < str.length; i++) {
     if (str.charAt(i) === my_chr) {
-    count++; 
+      count++; 
     }
   }
+  document.getElementById("characters").value = count;
 }
-document.getElementById("characters").innerHTML = count;
 </script>
 </body>
 </html>
