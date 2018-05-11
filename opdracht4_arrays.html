@@ -1,25 +1,55 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
 
-<div id="arrays"></div>
+	<div>'Twee waarden'<br><div>
+	<input id="two_values1" type="text" value=1 >
+	<input id="two_values2" type="text" value=10 >
+	<br><br>
+	<button type="button" onclick="showNumbers()">laat tussenliggende nummers zien</button>
+	<br><br>
+	<div id="results_two_values"></div>
+	<br>
+	
+	<button type="button" onclick="showSteps()">laat stappen zien</button>
+	<br><br>
+	<div id="results_three_values" ></div>
+	<br>
+	Steps
+	<br>
+	<input id="steps" type="text" value=3 >
+	
 
-<script>
-var range = [5, 20] ;
-function myfunction() {
-	var my_text ;
-	for (var i = range[0]; i>range[1]; i++) {
-		my_text += i + ' ';
-	}
-	document.getElementById("arrays").innerHTML = my_text ;
-}
-var range = [20, 5, -1]
-function myfunction(20, 5, stap) {
-for (var i = range[0]; i>range[1]; i+= stap) {
-
-document.getElementById("arrays").innerHTML = range 20, 5, -1 ;
-}
-</script>
+	<script>
+		
+		function showNumbers(str) {
+			//var range = [5, 20] ;
+			var value1 = document.getElementById("two_values1").value ;
+			var value2 = document.getElementById("two_values2").value ;
+			var my_text = "";
+			var my_sum = 0 ;
+			for (var i = value1; i<= value2; i++) {
+				my_text += i + ' ';
+				my_sum = my_sum + Number(i) ;
+			}
+			document.getElementById("results_two_values").innerHTML = value1 + ' tot '+ value2 + " = " + my_text + "<br> som = " + my_sum;
+		}
+		
+		function showSteps() {
+			var value1 = document.getElementById("two_values1").value ;
+			var value2 = document.getElementById("two_values2").value ;
+			var steps = document.getElementById("steps").value ;
+					var my_result = "";
+			for (var i = Number(value1); i<= Number(value2); i+= Number(steps) ) {
+			  my_result = my_result + i + ' ';
+			}
+//document.getElementById("results_three_values").innerHTML = my_result ;
+document.getElementById("results_three_values").innerHTML = value1 + ' tot '+ value2 + " with steps = " + steps + "<br> reeks = " + my_result; 
+			
+		}
+	</script>
 
 </body>
 </html>
