@@ -1,14 +1,23 @@
-﻿<!DOCTYPE.html>
+<!DOCTYPE.html>
 <html>
-<body onload="getMinValue(5, 100)">
-<div id="lowest"></div>
+<body>
+Voer twee waardes in: 
+<input id="MinValue" type="text"  >
+<input id="MaxValue" type="text"  >
+<button type="button" onclick="getMinValue()">
+Geef laagste waarde weer.
+</button>
+<input id="lowest" type="text" >
+
 
 <script>
-function getMinValue(numberOne, numberTwo) {
+function getMinValue() {
+	numberOne = document.getElementById("MinValue").value ;
+	numberTwo = document.getElementById("MaxValue").value ;
 	if(numberOne < numberTwo) {
-		document.getElementById("lowest").innerHTML = numberOne;  
+		document.getElementById("lowest").value = numberOne;  
  	} else {
-		document.getElementById("lowest").innerHTML = numberTwo;
+		document.getElementById("lowest").value = numberTwo;
 	}   
   
 };
