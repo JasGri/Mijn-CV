@@ -15,7 +15,7 @@ Verander de grootte:
 <input id="grootte" type="text" value=8 onchange="my_grootte()">
 <br><br>
 
-<div id="dambord"></div>
+<div id="schaakbord"></div>
 
 
 <script>
@@ -24,7 +24,7 @@ function my_grootte() {
   var character = "#";
   var character2 = ' | ';
   var line = "";
-  var row = "";
+  var schaakbord = "";
 	var size = document.getElementById("grootte").value ;
   	for(var i = 1; i <= size; i++){
 		line += character2+ character ;
@@ -35,7 +35,7 @@ function my_grootte() {
 	
 	}
     	
-	document.getElementById("dambord").innerHTML = row;
+	document.getElementById("schaakbord").innerHTML = schaakbord;
 }    
 </script>
 </body>
